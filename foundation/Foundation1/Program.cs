@@ -29,6 +29,7 @@ class Program
 
         // Display video information and comments
         foreach (var video in videos)
+        
         {
             Console.WriteLine($"Title: {video.Title}");
             Console.WriteLine($"Author: {video.Author}");
@@ -36,7 +37,7 @@ class Program
             Console.WriteLine($"Number of Comments: {video.GetCommentCount()}");
 
             foreach (var comment in video.GetComments())
-            
+
             {
                 Console.WriteLine($"Comment by {comment.Name}: {comment.Text}");
             }
