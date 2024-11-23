@@ -9,6 +9,7 @@ class Program
     {
         Console.WriteLine("Hello Foundation2 World!");    
     }
+        
         // Create addresses
         Address address1 = new Address("123 Elm St", "Springfield", "IL", "USA");
         Address address2 = new Address("456 Oak St", "London", "", "UK");
