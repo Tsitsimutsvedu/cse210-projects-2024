@@ -1,14 +1,21 @@
- public class EternalGoal : Goal
+ class EternalGoal : Goal
+{
+    public EternalGoal(string description, int points) : base(description, points)
     {
-        public EternalGoal(string name, int points) : base(name, points) { }
-
-        public override int RecordEvent()
-        {
-            return Points;
-        }
-
-        public override bool IsCompleted()
-        {
-            return false; 
-        }
     }
+
+    public override void RecordEvent()
+    {
+        // Always incomplete because it's eternal
+    }
+
+    public override bool IsComplete()
+    {
+        return false;
+    }
+
+    public override string GetProgress()
+    {
+        return "[∞]";
+    }
+}
